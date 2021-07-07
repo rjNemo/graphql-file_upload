@@ -1,0 +1,41 @@
+[scripts]
+dev = "uvicorn app.main:app --reload --port=8000"
+test = "python -m pytest --ignore=tests/functional_api"
+test-all = "python -m pytest --cov=. --cov-report=html --cov-report=xml"
+db-revision = "alembic revision --autogenerate"
+db-up = "alembic upgrade head"
+db-down = "alembic downgrade -1"
+
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+bandit = "==1.7.0"
+black = "==21.6b0"
+diff-cover = "==5.0.1"
+faker = "==8.1.0"
+flake8 = "==3.9.2"
+flake8-print = "==4.0.0"
+freezegun = "==1.1.0"
+mypy = "==0.910"
+pytest = "==6.2.4"
+pytest-asyncio = "==0.15.0"
+pytest-cov = "==2.12.1"
+safety = "==1.10.3"
+vulture = "==2.3"
+types-requests = "*"
+
+[packages]
+ariadne = {extras = ["asgi-file-uploads"], version = "==0.13.0"}
+fastapi = "==0.66.0"
+pydantic = {extras = ["email"], version = "==1.8.2"}
+uvicorn = {extras = ["standard"], version = "==0.13.4"}
+aiogqlc = "*"
+
+[requires]
+python_version = "3.9"
+
+[pipenv]
+allow_prereleases = true

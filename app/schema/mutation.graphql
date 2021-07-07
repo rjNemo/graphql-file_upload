@@ -1,0 +1,6 @@
+type Mutation {
+  """
+  Upload user generated image
+  """
+  uploadUserImage(image: Upload!): Boolean!
+}

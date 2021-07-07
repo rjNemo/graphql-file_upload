@@ -1,0 +1,13 @@
+[run]
+omit =
+    # omit tests
+    */tests/*
+    # omit non testable files
+    app/core/*
+    app/database/*
+    app/migrations/*
+    app/schema/*
+    app/main.py
+    # omit schema types and controllers
+[html]
+directory = .htmlcov
