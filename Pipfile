@@ -30,7 +30,7 @@ types-requests = "*"
 [packages]
 ariadne = {extras = ["asgi-file-uploads"], version = "==0.13.0"}
 fastapi = "==0.66.0"
-pydantic = {extras = ["email"], version = "==1.8.2"}
+pydantic = {extras = ["email"], version = "==1.10.13"}
 uvicorn = {extras = ["standard"], version = "==0.13.4"}
 aiogqlc = "*"
 
